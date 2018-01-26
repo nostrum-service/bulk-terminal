@@ -1,0 +1,8 @@
+<Metadata>
+  <DataType TypeName="Nostrum.Framework.TypedTemplate" Assembly="Nostrum.Framework" />
+  <Lookup Criteria="Name = ?" />
+  <Item Name="ГУ-27е" TemplateType="Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT" TargetObjectTypeName="bbt.asup.DataModel.RailwayBill" CriteriaString="Cars.Count &gt; 1" Visible="true" IsDefaultReport="false" Description="Форма ГУ-27е транспортной железнодорожной накладной на маршрут/группу вагонов/сцеп" />
+  <Repository System="GitHub" URL="https://github.com" Owner="nostrum-service" Name="bulk-terminal" Path="report_template" FileName="ГУ-27е.repx" />
+  <Publisher System="bbt.asup.Client" Version="1.0.0.0" UserName="Администратор" />
+  <Version Version="1.2.3.4" LastChanged="2018-01-26T19:43:06.2295859+03:00" />
+</Metadata>
