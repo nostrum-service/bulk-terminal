@@ -1,0 +1,8 @@
+<Metadata>
+  <DataType TypeName="Nostrum.Framework.TypedTemplate" Assembly="Nostrum.Framework" />
+  <Lookup Criteria="Name = ?" />
+  <Item Name="Акт учета стояночного времени судна" TemplateType="Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT" TargetObjectTypeName="bbt.asup.DataModel.ActOfVesselProcessing" CriteriaString="" Visible="true" IsDefaultReport="false" Description="" />
+  <Repository System="GitHub" URL="https://github.com" Owner="nostrum-service" Name="bulk-terminal" Path="report_template" FileName="Акт учета стояночного времени судна.repx" />
+  <Publisher System="bbt.asup.Client" Version="1.0.0.0" UserName="Администратор" />
+  <Version Version="1.2.3.4" LastChanged="2018-01-26T19:34:09.6541016+03:00" />
+</Metadata>
