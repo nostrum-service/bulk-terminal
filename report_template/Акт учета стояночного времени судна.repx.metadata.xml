@@ -1,4 +1,4 @@
-<Metadata>
+<Metadata type="Nostrum.Framework.TypedTemplate" Criteria="Name = ?">
   <DataType TypeName="Nostrum.Framework.TypedTemplate" Assembly="Nostrum.Framework" />
   <Lookup Criteria="Name = ?" />
   <Item Name="Акт учета стояночного времени судна" TemplateType="Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT" TargetObjectTypeName="bbt.asup.DataModel.ActOfVesselProcessing" CriteriaString="" Visible="true" IsDefaultReport="false" Description="" />
