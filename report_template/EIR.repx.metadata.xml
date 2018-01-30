@@ -4,5 +4,5 @@
   <Item Name="EIR" TemplateType="Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT" TargetObjectTypeName="bbt.asup.DataModel.ContainerHandoverProtocol" CriteriaString="" Visible="true" IsDefaultReport="true" Description="" />
   <Repository System="GitHub" URL="https://github.com" Owner="nostrum-service" Name="bulk-terminal" Path="report_template" FileName="EIR.repx" />
   <Publisher System="bbt.asup.Client" Version="1.0.0.0" UserName="admin" />
-  <Version Version="1.0.0.0" LastUpdated="2018-01-30T14:12:18.640582+03:00" />
+  <Version Version="1.0.0.0" LastUpdated="2018-01-30T14:13:00.8768052+03:00" />
 </Metadata>
