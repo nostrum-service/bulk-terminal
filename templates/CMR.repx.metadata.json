@@ -3,12 +3,10 @@
     "TypeName": "Nostrum.Framework.TypedTemplate",
     "Assembly": "Nostrum.Framework"
   },
-  "Lookup": {
-    "Criteria": "Name = ?"
-  },
+  "LookupCriteria": "Name == ?",
   "Item": {
     "Name": "CMR",
-    "TemplateType": "Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT",
+    "TemplateType": "@SysID == new Guid(Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT)",
     "TargetObjectTypeName": "bbt.asup.DataModel.MotorWaybill",
     "CriteriaString": "",
     "Visible": true,
