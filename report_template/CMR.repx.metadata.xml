@@ -1,7 +1,0 @@
-<Metadata>
-  <DataType TypeName="Nostrum.Framework.TypedTemplate" Assembly="Nostrum.Framework" />
-  <Lookup Criteria="Name = ?" />
-  <Item Name="CMR" TemplateType="Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT" TargetObjectTypeName="bbt.asup.DataModel.MotorWaybill" CriteriaString="" Visible="true" IsDefaultReport="false" Description="" />
-  <Repository System="GitHub" URL="https://github.com" Owner="nostrum-service" Name="bulk-terminal" Path="report_template" FileName="CMR.repx" />
-  <Publisher System="bbt.asup.Client" Version="1.0.0.0" UserName="admin" />
-</Metadata>
