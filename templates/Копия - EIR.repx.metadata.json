@@ -6,7 +6,7 @@
   "LookupCriteria": "Name == ?",
   "Item": {
     "Name": "Копия - EIR",
-    "TemplateType": "@SysID == new Guid(Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT)",
+    "TemplateType": "SysID == GetSystemIdByName('Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT')",
     "TargetObjectTypeName": "bbt.asup.DataModel.ContainerHandoverProtocol",
     "CriteriaString": "",
     "Visible": true,
