@@ -5,13 +5,33 @@
   },
   "LookupCriteria": "Name == ?",
   "Item": {
-    "Name": "EIR",
-    "TemplateType": "@SysID == new Guid(Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT)",
-    "TargetObjectTypeName": "bbt.asup.DataModel.ContainerHandoverProtocol",
-    "CriteriaString": "",
-    "Visible": true,
-    "IsDefaultReport": true,
-    "Description": ""
+    "DataType": {
+      "TypeName": "Nostrum.Framework.TypedTemplate",
+      "Assembly": "Nostrum.Framework"
+    },
+    "LookupCriteria": "Name == ?",
+    "Item": {
+      "Name": "EIR",
+      "TemplateType": "@SysID == new Guid(Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT)",
+      "TargetObjectTypeName": "bbt.asup.DataModel.ContainerHandoverProtocol",
+      "CriteriaString": "",
+      "Visible": true,
+      "IsDefaultReport": true,
+      "Description": ""
+    },
+    "Repository": {
+      "System": "GitHub",
+      "URL": "https://github.com",
+      "Owner": "nostrum-service",
+      "Name": "bulk-terminal",
+      "Path": "templates1",
+      "FileName": "EIR.repx"
+    },
+    "Publisher": {
+      "System": "bbt.asup.Client",
+      "ProductVersion": "0.9.107.0",
+      "UserName": "admin"
+    }
   },
   "Repository": {
     "System": "GitHub",
