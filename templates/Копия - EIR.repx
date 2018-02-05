@@ -33,7 +33,6 @@ namespace XtraReportSerialization {
         private DevExpress.XtraReports.UI.XRTableRow tableRow1;
         private DevExpress.XtraReports.UI.XRTableCell tableCell1;
         private DevExpress.XtraReports.UI.XRTableCell tableCell4;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell2;
         private DevExpress.XtraReports.UI.XRTableCell tableCell16;
         private DevExpress.XtraReports.UI.XRTableCell tableCell3;
         private DevExpress.XtraReports.UI.XRTableCell tableCell5;
@@ -223,7 +222,6 @@ namespace XtraReportSerialization {
             this.tableRow30 = new DevExpress.XtraReports.UI.XRTableRow();
             this.tableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.tableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -411,7 +409,6 @@ namespace XtraReportSerialization {
             this.tableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
                         this.tableCell1,
                         this.tableCell4,
-                        this.tableCell2,
                         this.tableCell16,
                         this.tableCell3,
                         this.tableCell5});
@@ -752,26 +749,12 @@ namespace XtraReportSerialization {
             this.tableCell4.StylePriority.UseBorders = false;
             this.tableCell4.Weight = 0.82257331596626027D;
             // 
-            // tableCell2
-            // 
-            this.tableCell2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-                        | DevExpress.XtraPrinting.BorderSide.Right) 
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.tableCell2.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.tableCell2.Name = "tableCell2";
-            this.tableCell2.StylePriority.UseBorders = false;
-            this.tableCell2.StylePriority.UseFont = false;
-            this.tableCell2.StylePriority.UseTextAlignment = false;
-            this.tableCell2.Text = "EIR";
-            this.tableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.tableCell2.Weight = 0.31318647782881193D;
-            // 
             // tableCell16
             // 
             this.tableCell16.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)));
             this.tableCell16.Name = "tableCell16";
             this.tableCell16.StylePriority.UseBorders = false;
-            this.tableCell16.Weight = 1.0915760417560954D;
+            this.tableCell16.Weight = 1.4047625195849074D;
             // 
             // tableCell3
             // 

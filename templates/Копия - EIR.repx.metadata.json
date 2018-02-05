@@ -5,13 +5,33 @@
   },
   "LookupCriteria": "Name == ?",
   "Item": {
-    "Name": "Супер новая копия - EIR",
-    "TemplateType": "SysID == GetSystemIdByName('Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT')",
-    "TargetObjectTypeName": "bbt.asup.DataModel.ContainerHandoverProtocol",
-    "CriteriaString": "",
-    "Visible": true,
-    "IsDefaultReport": false,
-    "Description": "для глумления"
+    "DataType": {
+      "TypeName": "Nostrum.Framework.TypedTemplate",
+      "Assembly": "Nostrum.Framework"
+    },
+    "LookupCriteria": "Name == ?",
+    "Item": {
+      "Name": "Супер новая копия - EIR",
+      "TemplateType": "SysID == GetSystemIdByName('Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT')",
+      "TargetObjectTypeName": "bbt.asup.DataModel.ContainerHandoverProtocol",
+      "CriteriaString": "",
+      "Visible": true,
+      "IsDefaultReport": false,
+      "Description": "для глумления"
+    },
+    "Repository": {
+      "System": "GitHub",
+      "URL": "https://github.com",
+      "Owner": "nostrum-service",
+      "Name": "bulk-terminal",
+      "Path": "templates",
+      "FileName": "Копия - EIR.repx"
+    },
+    "Publisher": {
+      "System": "bbt.asup.Client",
+      "ProductVersion": "0.9.107.0",
+      "UserName": "admin"
+    }
   },
   "Repository": {
     "System": "GitHub",
