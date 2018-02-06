@@ -1,0 +1,27 @@
+{
+  "DataType": {
+    "TypeName": "Nostrum.Framework.UserInterfaceDesktopMarkup",
+    "Assembly": "Nostrum.Framework"
+  },
+  "LookupCriteria": "Name == ?",
+  "Item": {
+    "Name": "Копия - Интерфейс администратора",
+    "Enabled": true,
+    "User": null,
+    "Group": "Name == 'Администраторы'",
+    "Description": null
+  },
+  "Repository": {
+    "System": "GitHub",
+    "URL": "https://github.com",
+    "Owner": "nostrum-service",
+    "Name": "bulk-terminal",
+    "Path": "desktop",
+    "FileName": "Копия - Интерфейс администратора.json"
+  },
+  "Publisher": {
+    "System": "bbt.asup.Client",
+    "ProductVersion": "0.9.107.0",
+    "UserName": "admin"
+  }
+}
