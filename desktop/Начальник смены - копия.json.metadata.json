@@ -1,0 +1,27 @@
+{
+  "DataType": {
+    "TypeName": "Nostrum.Framework.UserInterfaceDesktopMarkup",
+    "Assembly": "Nostrum.Framework"
+  },
+  "LookupCriteria": "Name == 'Начальник смены - копия'",
+  "Item": {
+    "Name": "Начальник смены - копия",
+    "Enabled": false,
+    "User": null,
+    "Group": "Name == 'Начальники смены'",
+    "Description": null
+  },
+  "Repository": {
+    "System": "GitHub",
+    "URL": "https://github.com/",
+    "Owner": "nostrum-service",
+    "Name": "bulk-terminal",
+    "Path": "desktop",
+    "FileName": "Начальник смены - копия.json"
+  },
+  "Publisher": {
+    "System": "bbt.asup.Client",
+    "ProductVersion": "0.9.107.0",
+    "UserName": "admin"
+  }
+}

@@ -1,0 +1,803 @@
+{
+    "Dashboards": [
+        {
+            "$id": "{1FF6E2AE-4526-4265-B595-BCA5EA05EDE7}",
+            "Id": "{1FF6E2AE-4526-4265-B595-BCA5EA05EDE7}",
+            "Name": "Main",
+            "Layout": {
+                "Mode": "TableLayout",
+                "Rows": [
+                    { "Length": 2 },
+                    { "Length": 1 },
+                    { "Length": 1 }
+                ],
+                "Columns": [
+                    { "Length": 1 },
+                    { "Length": 2 }
+                ]
+            },
+            "Components": [
+                {
+                    "Id": "{2960347D-20CC-4CD9-9BBE-4E8E5E8307F6}",
+                    "ViewModelTypeName": "CommandPanelViewModel",
+                    "ViewTypeName": "CommandPanelView",
+                    "ColumnIndex": 0,
+                    "RowIndex": 0,
+                    "RowSpan": 3,
+                    "Settings": {
+                        "Commands": [
+                            {
+                                "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                                "Caption": "Юридические лица",
+                                "ViewModelTypeName": "GridViewModel",
+                                "Images": [
+                                    {
+                                        "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                                        "Id": "Info",
+                                        "Size": "Size32x32",
+                                        "Type": "Office2013"
+                                    }
+                                ]
+                            },
+                            {
+                                "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                                "Caption": "Физические лица",
+                                "ViewModelTypeName": "GridViewModel"
+                            },
+                            {
+                                "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                                "Caption": "Грузы",
+                                "ViewModelTypeName": "GridViewModel"
+                            },
+                            {
+                                "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                                "Caption": "Суда",
+                                "ViewModelTypeName": "GridViewModel"
+                            },
+                            {
+                                "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                                "Caption": "Автотранспорт",
+                                "ViewModelTypeName": "GridViewModel"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "Id": "{B91D3513-4EF3-40B9-84D8-F1228B2114DF}",
+                    "ViewModelTypeName": "ChartViewModel",
+                    "ViewTypeName": "ChartView",
+                    "ColumnIndex": 1,
+                    "RowIndex": 0
+                },
+                {
+                    "Id": "{E64B96D4-35B6-4BA8-83ED-099F61F87C2D}",
+                    "ViewModelTypeName": "MapViewModel",
+                    "ViewTypeName": "MapView",
+                    "ColumnIndex": 1,
+                    "RowIndex": 1
+                },
+                {
+                    "Id": "{BFE8E471-3BB4-4287-A820-2BCAD3BCC3B5}",
+                    "ViewModelTypeName": "GridViewModel",
+                    "ViewTypeName": "GridView",
+                    "ColumnIndex": 1,
+                    "RowIndex": 2
+                }
+            ]
+        },
+
+    ],
+
+    "Commands": [
+        {
+            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+            "$id": "{CDB6A728-32D9-475C-83F3-F1D4E1B179D6}",
+            "Id": "{CDB6A728-32D9-475C-83F3-F1D4E1B179D6}",
+            "Name": "Test",
+            "Caption": "Юридические лица",
+            "ViewModelTypeName": "BaseCollectionViewModel",
+            "ViewTypeName": "BaseGridView",
+            "ViewSettings": {
+                "Type": "bbt.asup.DataModel.LegalPerson"
+            }
+        },
+
+        {
+            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+            "Command": "OpenView",
+            "Caption": "Команды",
+            "Id": "{6044A799-CD6E-4B91-8578-C91CD49A014D}",
+            "ViewModelTypeName": "CommandPanelViewModel",
+            "ViewTypeName": "CommandPanelView",
+            "ViewSettings": {
+                "Commands": [
+                    {
+                        "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                        "Command": "OpenView",
+                        "Caption": "Грузы",
+                        "ViewModelTypeName": "BaseCollectionViewModel",
+                        "ViewTypeName": "BaseGridView",
+                        "ViewSettings": {
+                            "Type": "bbt.asup.DataModel.NomenclatureProduct"
+                        },
+                        "Images": [
+                            {
+                                "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                                "Id": "Info",
+                                "Size": "Size32x32",
+                                "Type": "Office2013"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                        "Command": "OpenView",
+                        "Caption": "Суда",
+                        "ViewModelTypeName": "BaseCollectionViewModel",
+                        "ViewTypeName": "BaseGridView",
+                        "ViewSettings": {
+                            "Type": "bbt.asup.DataModel.Vessel"
+                        }
+                    },
+                    {
+                        "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                        "Command": "OpenView",
+                        "Caption": "Автотранспорт",
+                        "ViewModelTypeName": "BaseCollectionViewModel",
+                        "ViewTypeName": "BaseGridView",
+                        "ViewSettings": {
+                            "Type": "bbt.asup.DataModel.AutoTransportVehicle"
+                        }
+                    }
+                ]
+            }
+        }
+
+    ],
+
+    "Ribbon": {
+        "Pages": [
+            {
+                "Name": "Main",
+                "Caption": "Main",
+                "Commands": [
+                    "Test"
+                ]
+            }
+        ]
+    },
+
+    "Startup_off": "{6044A799-CD6E-4B91-8578-C91CD49A014D}",
+
+    "Modules": [
+        {
+            "Id": "{F0A8942D-5D52-4E83-8991-2A0E119A53A0}",
+            "Name": "ModuleMain",
+            "Caption": "Главная",
+            "Images": [
+                {
+                    "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                    "Id": "Home",
+                    "Size": "Size16x16",
+                    "Type": "Office2013"
+                }
+            ],
+
+            "Commands": [
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Id": "{999EC629-0054-431A-8FAE-CD52C8C067BD}",
+                    "Command": "OpenView",
+                    "Caption": "Панель управления",
+                    "SingleInstance": true,
+                    "ViewModelTypeName": "DashboardViewModel",
+                    "ViewTypeName": "DashboardView",
+                    "ViewSettings": {
+                        "Layout": {
+                            "Mode": "TableLayout",
+                            "Rows": [
+                                { "Length": 1 },
+                                { "Length": 1 },
+                                { "Length": 1 },
+                                { "Length": 1 }
+                            ],
+                            "Columns": [
+                                { "Length": 1 },
+                                { "Length": 2 }
+                            ]
+                        },
+                        "Components": [
+                            {
+                                "Id": "{2960347D-20CC-4CD9-9BBE-4E8E5E8307F6}",
+                                "ViewModelTypeName": "CommandPanelViewModel",
+                                "ViewTypeName": "CommandPanelView",
+                                "ColumnIndex": 0,
+                                "RowIndex": 0,
+                                "RowSpan": 2,
+                                "Settings": {
+                                    "Commands": [
+                                        {
+                                            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                                            "Caption": "Юридические лица",
+                                            "ViewModelTypeName": "BaseCollectionViewModel",
+                                            "ViewTypeName": "BaseGridView",
+                                            "ViewSettings": {
+                                                "Type": "bbt.asup.DataModel.LegalPerson"
+                                            }
+                                        },
+                                        {
+                                            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                                            "Caption": "Физические лица",
+                                            "ViewModelTypeName": "BaseCollectionViewModel",
+                                            "ViewTypeName": "BaseGridView",
+                                            "ViewSettings": {
+                                                "Type": "bbt.asup.DataModel.NaturalPerson"
+                                            }
+                                        },
+                                        {
+                                            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                                            "Caption": "Грузы",
+                                            "ViewModelTypeName": "BaseCollectionViewModel",
+                                            "ViewTypeName": "BaseGridView",
+                                            "ViewSettings": {
+                                                "Type": "bbt.asup.DataModel.NomenclatureProduct"
+                                            }
+                                        },
+                                        {
+                                            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                                            "Caption": "Суда",
+                                            "ViewModelTypeName": "BaseCollectionViewModel",
+                                            "ViewTypeName": "BaseGridView",
+                                            "ViewSettings": {
+                                                "Type": "bbt.asup.DataModel.Vessel"
+                                            }
+                                        },
+                                        {
+                                            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                                            "Caption": "Автотранспорт",
+                                            "ViewModelTypeName": "BaseCollectionViewModel",
+                                            "ViewTypeName": "BaseGridView",
+                                            "ViewSettings": {
+                                                "Type": "bbt.asup.DataModel.AutoTransportVehicle"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "Id": "{C2757701-C581-4708-8C61-B82349C01D2D}",
+                                "Caption": "Состояние смены",
+                                "ViewModelTypeName": "ShiftWidgetViewModel",
+                                "ViewTypeName": "ShiftWidgetView",
+                                "ColumnIndex": 0,
+                                "RowIndex": 2,
+                                "RowSpan": 2
+                            },
+
+                            {
+                                "Id": "{B91D3513-4EF3-40B9-84D8-F1228B2114DF}",
+                                "Caption": "Состояние склада",
+                                "ViewModelTypeName": "StockBalanceDiagramViewModel",
+                                "ViewTypeName": "StockBalanceDiagramView",
+                                "ColumnIndex": 1,
+                                "RowIndex": 0
+                            },
+                            {
+                                "Id": "{E64B96D4-35B6-4BA8-83ED-099F61F87C2D}",
+                                "Caption": "Загрузка путей",
+                                "ViewModelTypeName": "RailroadLoadingDiagramViewModel",
+                                "ViewTypeName": "RailroadLoadingDiagramView",
+                                "ColumnIndex": 1,
+                                "RowIndex": 1
+                            },
+                            {
+                                "Id": "{BFE8E471-3BB4-4287-A820-2BCAD3BCC3B5}",
+                                "Caption": "Процессы",
+                                "ViewModelTypeName": "ProcessListViewModel",
+                                "ViewTypeName": "ProcessListView",
+                                "ColumnIndex": 1,
+                                "RowIndex": 2
+                            },
+                            {
+                                "Id": "{D00D431A-60E6-4592-A98C-178029D71973}",
+                                "Caption": "Задания",
+                                "ViewModelTypeName": "TaskListViewModel",
+                                "ViewTypeName": "TaskListView",
+                                "ColumnIndex": 1,
+                                "RowIndex": 3
+                            }
+                        ]
+                    },
+                    "Images": [
+                        {
+                            "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                            "Id": "Navigationbar",
+                            "Size": "Size16x16",
+                            "Type": "Office2013"
+                        }
+                    ]
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Id": "{D27AAD29-A8DD-4B7D-9CEE-1CCC8B27B25B}",
+                    "Caption": "Управление ЖД",
+                    "SingleInstance": true,
+                    "ViewModelTypeName": "DashboardViewModel",
+                    "ViewTypeName": "DashboardView",
+                    "ViewSettings": {
+                        "Title": "Управление ЖД",
+                        "Layout": {
+                            "Mode": "FreeLayout",
+                            "Rows": [
+                                { "Length": 2 },
+                                { "Length": 1 }
+                            ],
+                            "Columns": [
+                                { "Length": 1 }
+                            ]
+                        },
+                        "Components": [
+                            {
+                                "Id": "{99CA78A5-061C-4BD5-AD54-7834058DEF4F}",
+                                "ViewModelTypeName": "RailwayManagementViewModel",
+                                "ViewTypeName": "RailwayManagementView",
+                                "ColumnIndex": 0,
+                                "RowIndex": 0
+                            },
+                            {
+                                "Id": "{2ED6EBD5-C963-4116-8CE6-AC549F969D25}",
+                                "ViewModelTypeName": "TaskListViewModel",
+                                "ViewTypeName": "TaskListView",
+                                "ColumnIndex": 0,
+                                "RowIndex": 1
+                            }
+                        ]
+                    }
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Caption": "Процессы",
+                    "StandaloneWindow": false,
+                    "SingleInstance": true,
+                    "ViewModelTypeName": "ProcessListViewModel",
+                    "ViewTypeName": "ProcessListView",
+                    "Images": [
+                        {
+                            "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                            "Id": "Properties",
+                            "Size": "Size16x16",
+                            "Type": "Office2013"
+                        }
+                    ]
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Caption": "Задания",
+                    "StandaloneWindow": false,
+                    "SingleInstance": true,
+                    "ViewModelTypeName": "TaskListViewModel",
+                    "ViewTypeName": "TaskListView",
+                    "Images": [
+                        {
+                            "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                            "Id": "Status",
+                            "Size": "Size16x16",
+                            "Type": "Office2013"
+                        }
+                    ]
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Id": "{0F73D40B-B51D-4642-98E1-10F15D0EFB70}",
+                    "Caption": "Уведомления",
+                    "StandaloneWindow": false,
+                    "SingleInstance": true,
+                    "ViewModelTypeName": "BaseCollectionViewModel",
+                    "ViewTypeName": "BaseGridView",
+                    "ViewSettings": {
+                        "Type": "Nostrum.Framework.Notification"
+                    },
+                    "Images": [
+                        {
+                            "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                            "Id": "Notes",
+                            "Size": "Size16x16",
+                            "Type": "Office2013"
+                        }
+                    ]
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Caption": "Состояние склада",
+                    "SingleInstance": true,
+                    "ViewModelTypeName": "StockBalanceDiagramViewModel",
+                    "ViewTypeName": "StockBalanceDiagramView",
+                    "Images": [
+                        {
+                            "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                            "Id": "Info",
+                            "Size": "Size16x16",
+                            "Type": "Office2013"
+                        }
+                    ]
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Caption": "Загрузка путей",
+                    "SingleInstance": true,
+                    "ViewModelTypeName": "RailroadLoadingDiagramViewModel",
+                    "ViewTypeName": "RailroadLoadingDiagramView",
+                    "Images": [
+                        {
+                            "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                            "Id": "Ide",
+                            "Size": "Size16x16",
+                            "Type": "Office2013"
+                        }
+                    ]
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Command": "OpenView",
+                    "Caption": "Команды",
+                    "SingleInstance": true,
+                    "ViewModelTypeName": "CommandPanelViewModel",
+                    "ViewTypeName": "CommandPanelView",
+                    "ViewSettings": {
+                        "Commands": [
+                            {
+                                "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                                "Command": "OpenView",
+                                "Caption": "Грузы",
+                                "ViewModelTypeName": "BaseCollectionViewModel",
+                                "ViewTypeName": "BaseGridView",
+                                "ViewSettings": {
+                                    "Type": "bbt.asup.DataModel.NomenclatureProduct"
+                                },
+                                "Images": [
+                                    {
+                                        "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                                        "Id": "Info",
+                                        "Size": "Size32x32",
+                                        "Type": "Office2013"
+                                    }
+                                ]
+                            },
+                            {
+                                "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                                "Command": "OpenView",
+                                "Caption": "Суда",
+                                "ViewModelTypeName": "BaseCollectionViewModel",
+                                "ViewTypeName": "BaseGridView",
+                                "ViewSettings": {
+                                    "Type": "bbt.asup.DataModel.Vessel"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+
+        {
+            "Id": "{9F869E0B-A86A-4F0D-ADED-8F3ACD112752}",
+            "Name": "ModuleDirectory",
+            "Caption": "Справочники",
+            "Images": [
+                {
+                    "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                    "Id": "Database",
+                    "Size": "Size16x16",
+                    "Type": "Office2013"
+                }
+            ],
+
+            "Commands": [
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Command": "OpenView",
+                    "Caption": "Группы номенклатуры",
+                    "ViewModelTypeName": "BaseCollectionViewModel",
+                    "ViewTypeName": "BaseTreeView",
+                    "ViewSettings": {
+                        "Type": "bbt.asup.DataModel.AnalyticalGroup",
+                        "ViewType": "TreeView"
+                    }
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Command": "OpenView",
+                    "Caption": "Номенклатура",
+                    "ViewModelTypeName": "BaseCollectionViewModel",
+                    "ViewTypeName": "BaseTreeView",
+                    "ViewSettings": {
+                        "Type": "bbt.asup.DataModel.Nomenclature",
+                        "ViewType": "TreeView"
+                    }
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Command": "OpenView",
+                    "Caption": "Суда",
+                    "ViewModelTypeName": "BaseCollectionViewModel",
+                    "ViewTypeName": "BaseGridView",
+                    "ViewSettings": {
+                        "Type": "bbt.asup.DataModel.Vessel"
+                    }
+                }
+
+            ]
+        },
+
+        {
+            "Id": "{0F562F6E-67A7-4D2A-B8D7-D6FD43670BB7}",
+            "Name": "ModuleDocument",
+            "Caption": "Документы",
+            "Images": [
+                {
+                    "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                    "Id": "Product",
+                    "Size": "Size16x16",
+                    "Type": "Office2013"
+                }
+            ],
+
+            "Commands": [
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Caption": "Задание на погрузку",
+                    "ViewModelTypeName": "BaseCollectionViewModel",
+                    "ViewTypeName": "BaseGridView",
+                    "ViewSettings": {
+                        "Type": "bbt.asup.DataModel.BoardingTask"
+                    }
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Caption": "Контейнерный лот",
+                    "ViewModelTypeName": "BaseCollectionViewModel",
+                    "ViewTypeName": "BaseGridView",
+                    "ViewSettings": {
+                        "Type": "bbt.asup.DataModel.ContainerLot"
+                    }
+                }
+
+
+            ]
+        },
+
+        {
+            "Id": "{E728705F-E59D-45A1-A6A5-750D95E50BF5}",
+            "Name": "ModuleControl",
+            "Caption": "Управление",
+            "Commands": [
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Caption": "Вагоны на терминале",
+                    "StandaloneWindow": false,
+                    "SingleInstance": true,
+                    "ViewModelTypeName": "RailwayCarsViewModel",
+                    "ViewTypeName": "RailwayCarsView"
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Caption": "Обработка судов",
+                    "StandaloneWindow": false,
+                    "SingleInstance": true,
+                    "ViewModelTypeName": "VesselProcessingKanbanWidgetViewModel",
+                    "ViewTypeName": "VesselProcessingKanbanWidgetView"
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Id": "{CA492047-9F3D-4522-AB35-D706A5B3A6D5}",
+                    "Command": "OpenView",
+                    "Caption": "Погрузка судов",
+                    "SingleInstance": true,
+                    "ViewModelTypeName": "DashboardViewModel",
+                    "ViewTypeName": "DashboardView",
+                    "ViewSettings": {
+                        "Title": "Погрузка судов",
+                        "ControllerTypeName": "",
+                        "Layout": {
+                            //"Mode": "FreeLayout",
+                            "Mode": "TableLayout",
+                            "Rows": [
+                                { "Length": 1 },
+                                { "Length": 1 },
+                                { "Length": 1 },
+                                { "Length": 1 }
+                            ],
+                            "Columns": [
+                                {
+                                    "Length": 300,
+                                    "Unit": "Pixel"
+                                },
+                                { "Length": 1 },
+                                { "Length": 1 }
+                            ]
+                        },
+                        "Components": [
+                            {
+                                "Name": "Vessels",
+                                "Caption": "Судовой фронт",
+                                "ViewModelTypeName": "VesselProcessingWidgetViewModel",
+                                "ViewTypeName": "VesselProcessingWidgetView",
+                                //"ShowBorders": "False",
+                                "AllowMaximize": "False",
+                                "ColumnIndex": 0,
+                                "RowIndex": 0,
+                                "RowSpan": 4
+                            },
+
+                            {
+                                "Name": "BoardingControl",
+                                "Caption": "Погрузка судна",
+                                "ViewModelTypeName": "VesselBoardingControlWidgetViewModel",
+                                "ViewTypeName": "VesselBoardingControlWidgetView",
+                                "ColumnIndex": 1,
+                                "RowIndex": 0,
+                                "ColumnSpan": 1,
+                                "RowSpan": 3
+                            },
+
+
+                            {
+                                "Name": "BoardingOperationalBalance",
+                                "Caption": "Погрузка",
+                                "ViewModelTypeName": "VesselBoardingBalanceWidgetViewModel",
+                                "ViewTypeName": "VesselBoardingBalanceWidgetView",
+                                "ColumnIndex": 1,
+                                "RowIndex": 3,
+                                "ColumnSpan": 1,
+                                "RowSpan": 1
+                            },
+
+                            {
+                                "Name": "BoardingAssignments",
+                                "Caption": "Поручения",
+                                "ViewModelTypeName": "VesselBoardingAssignmentsWidgetViewModel",
+                                "ViewTypeName": "VesselBoardingAssignmentsWidgetView",
+                                "ColumnIndex": 2,
+                                "RowIndex": 0
+                            },
+
+                            {
+                                "Name": "BoardingTask",
+                                "Caption": "Задание",
+                                "ViewModelTypeName": "VesselBoardingTaskWidgetViewModel",
+                                "ViewTypeName": "VesselBoardingTaskWidgetView",
+                                "ColumnIndex": 2,
+                                "RowIndex": 1,
+                                "ColumnSpan": 1
+                            },
+
+                            {
+                                "Name": "BoardingDeliveryNotes",
+                                "Caption": "Накладные",
+                                "ViewModelTypeName": "VesselBoardingDeliveryNotesWidgetViewModel",
+                                "ViewTypeName": "VesselBoardingDeliveryNotesWidgetView",
+                                "ColumnIndex": 2,
+                                "RowIndex": 2
+                            },
+
+                            {
+                                "Name": "BillsOfLading",
+                                "Caption": "Коносаменты",
+                                "ViewModelTypeName": "VesselBoardingBillsOfLadingWidgetViewModel",
+                                "ViewTypeName": "VesselBoardingBillsOfLadingWidgetView",
+                                "ColumnIndex": 2,
+                                "RowIndex": 3
+                            }
+
+                        ],
+
+                        "Bindings": [
+                            {
+                                "SourceElement": "Vessels",
+                                "SourcePath": "VesselCallId",
+                                "TargetElement": "BoardingControl",
+                                "TargetPath": "VesselCallId"
+                            },
+
+                            {
+                                "SourceElement": "Vessels",
+                                "SourcePath": "VesselCallId",
+                                "TargetElement": "BoardingOperationalBalance",
+                                "TargetPath": "VesselCallId"
+                            },
+
+                            {
+                                "SourceElement": "Vessels",
+                                "SourcePath": "VesselCallId",
+                                "TargetElement": "BoardingAssignments",
+                                "TargetPath": "VesselCallId"
+                            },
+
+                            {
+                                "SourceElement": "Vessels",
+                                "SourcePath": "VesselCallId",
+                                "TargetElement": "BoardingDeliveryNotes",
+                                "TargetPath": "VesselCallId"
+                            },
+
+                            {
+                                "SourceElement": "Vessels",
+                                "SourcePath": "VesselCallId",
+                                "TargetElement": "BillsOfLading",
+                                "TargetPath": "VesselCallId"
+                            },
+
+                            {
+                                "SourceElement": "Vessels",
+                                "SourcePath": "VesselCallId",
+                                "TargetElement": "BoardingTask",
+                                "TargetPath": "VesselCallId"
+                            }
+
+
+                        ]
+                    },
+                    "Images": [
+                        {
+                            "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                            "Id": "Navigationbar",
+                            "Size": "Size16x16",
+                            "Type": "Office2013"
+                        }
+                    ]
+                }
+
+            ]
+
+        },
+
+        {
+            "Id": "{3750B5A4-626A-45AE-82B3-22E14C6333DC}",
+            "Name": "ModuleCTM",
+            "Caption": "Управление КП",
+            "Commands": [
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Caption": "Контейнерная площадка",
+                    "StandaloneWindow": false,
+                    "SingleInstance": true,
+                    "ViewModelTypeName": "ContainerStorageManagementViewModel",
+                    "ViewTypeName": "ContainerStorageManagementView"
+                },
+
+                {
+                    "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+                    "Command": "OpenView",
+                    "Caption": "Лоты",
+                    "ViewModelTypeName": "BaseCollectionViewModel",
+                    "ViewTypeName": "BaseGridView",
+                    "ViewSettings": {
+                        "Type": "bbt.asup.DataModel.ContainerLot"
+                    }
+                }
+
+            ]
+
+        },
+
+        {
+            "Id": "{771CCA3E-E2B7-4159-B216-49ADB94D6754}",
+            "Name": "ModuleAddon",
+            "Caption": "Расширения"
+        }
+
+    ]
+}
