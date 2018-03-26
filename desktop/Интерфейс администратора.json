@@ -1583,7 +1583,7 @@
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Command": "OpenView",
-          "Caption": "Ввод пломб",
+          "Caption": "Ввод ЗПУ",
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
