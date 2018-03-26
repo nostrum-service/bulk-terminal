@@ -1513,55 +1513,55 @@
                 { "Length": 1 }
               ]
             },
-                "Components": [
-                  {
-                    "Name": "ContainerStorage",
-                    "Caption": "Контейнерная площадка",
-                    "ViewModelTypeName": "ContainerStorageManagementViewModel",
-                    "ViewTypeName": "ContainerStorageManagementView",
-                    "ColumnIndex": 2,
-                    "RowIndex": 2,
-                    "ColumnSpan": 2,
-                    "RowSpan": 2
-                  },
-                  {
-                    "Name": "ContainerCellPositionWidget",
-                    "Caption": "Боковой вид стека",
-                    "ViewModelTypeName": "ContainerCellPositionWidget",
-                    "ViewTypeName": "ContainerCellPositionWidgetView",
-                    "ColumnIndex": 0,
-                    "RowIndex": 2,
-                    "ColumnSpan": 2,
-                    "RowSpan": 2
-                  },
-                  {
-                    "Name": "ContainerAreaWidget",
-                    "Caption": "План контейнерной площадки",
-                    "ViewModelTypeName": "ContainerAreaWidget",
-                    "ViewTypeName": "ContainerAreaWidgetView",
-                    "ColumnIndex": 0,
-                    "RowIndex": 0,
-                    "ColumnSpan": 4,
-                    "RowSpan": 2
-                  },
-                  {
-                    "Name": "ContainerAreaTreeWidget",
-                    "Caption": "Структура контейнерной площадки",
-                    "ViewModelTypeName": "ContainerAreaTreeWidget",
-                    "ViewTypeName": "ContainerAreaTreeWidgetView",
-                    "ColumnIndex": 4,
-                    "RowIndex": 0,
-                    "RowSpan": 2
-                  },
-                  {
-                    "Name": "ContainerAreaPropertyWidget",
-                    "Caption": "Свойства",
-                    "ViewModelTypeName": "ContainerAreaPropertyWidget",
-                    "ViewTypeName": "ContainerAreaPropertyWidgetView",
-                    "ColumnIndex": 4,
-                    "RowIndex": 2,
-                    "RowSpan": 2
-                  }
+            "Components": [
+              {
+                "Name": "ContainerStorage",
+                "Caption": "Контейнерная площадка",
+                "ViewModelTypeName": "ContainerStorageManagementViewModel",
+                "ViewTypeName": "ContainerStorageManagementView",
+                "ColumnIndex": 2,
+                "RowIndex": 2,
+                "ColumnSpan": 2,
+                "RowSpan": 2
+              },
+              {
+                "Name": "ContainerCellPositionWidget",
+                "Caption": "Боковой вид стека",
+                "ViewModelTypeName": "ContainerCellPositionWidget",
+                "ViewTypeName": "ContainerCellPositionWidgetView",
+                "ColumnIndex": 0,
+                "RowIndex": 2,
+                "ColumnSpan": 2,
+                "RowSpan": 2
+              },
+              {
+                "Name": "ContainerAreaWidget",
+                "Caption": "План контейнерной площадки",
+                "ViewModelTypeName": "ContainerAreaWidget",
+                "ViewTypeName": "ContainerAreaWidgetView",
+                "ColumnIndex": 0,
+                "RowIndex": 0,
+                "ColumnSpan": 4,
+                "RowSpan": 2
+              },
+              {
+                "Name": "ContainerAreaTreeWidget",
+                "Caption": "Структура контейнерной площадки",
+                "ViewModelTypeName": "ContainerAreaTreeWidget",
+                "ViewTypeName": "ContainerAreaTreeWidgetView",
+                "ColumnIndex": 4,
+                "RowIndex": 0,
+                "RowSpan": 2
+              },
+              {
+                "Name": "ContainerAreaPropertyWidget",
+                "Caption": "Свойства",
+                "ViewModelTypeName": "ContainerAreaPropertyWidget",
+                "ViewTypeName": "ContainerAreaPropertyWidgetView",
+                "ColumnIndex": 4,
+                "RowIndex": 2,
+                "RowSpan": 2
+              }
             ],
 
             "Bindings": [
@@ -1598,6 +1598,16 @@
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
             "Type": "bbt.asup.DataModel.AccreditationOfTransportCompany"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Расписание таймслотов",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.VehicleBookingSystemSchedule"
           }
         },
 
@@ -1676,6 +1686,17 @@
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
             "Type": "bbt.asup.DataModel.ContainerDeparture"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Декларации VGM",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.DeclarationVgm"
           }
         },
 
@@ -1843,6 +1864,17 @@
           "ViewSettings": {
             "Type": "bbt.asup.DataModel.AbstractStorageItem",
             "ViewType": "TreeView"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Топология объектов",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.FacilityTopology",
           }
         },
 
