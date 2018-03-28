@@ -1613,6 +1613,27 @@
 
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Таймслоты",
+          "StandaloneWindow": false,
+          "SingleInstance": true,
+          "ViewModelTypeName": "TimeslotProcessingWidgetViewModel",
+          "ViewTypeName": "TimeslotProcessingWidgetView"
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Заявки на регистрацию рейсов",
+          "StandaloneWindow": false,
+          "SingleInstance": true,
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.AutoTransportVoyageBookingClaim"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Caption": "Рейсы автотранспорта",
           "StandaloneWindow": false,
           "SingleInstance": true,
