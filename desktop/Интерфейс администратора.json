@@ -942,11 +942,11 @@
 
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
-          "Caption": "Поручение на погрузку",
+          "Caption": "Поручение на погрузку (навал)",
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
-            "Type": "bbt.asup.DataModel.BoardingAssignment"
+            "Type": "bbt.asup.DataModel.BoardingAssignmentInBulk"
           }
         },
 
@@ -1481,6 +1481,7 @@
       "Name": "ModuleCTM",
       "Caption": "Управление КП",
       "Commands": [
+
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Id": "{7BC4FA00-6DA6-4470-908F-FB081FF6AF36}",
@@ -1492,80 +1493,59 @@
           "ViewSettings": {
             "Title": "Контейнерная площадка",
             "ControllerTypeName": "",
+            "LayoutMode": "FreeLayout",
             "Layout": {
-              //"Mode": "FreeLayout",
-              "Mode": "TableLayout",
-              "Rows": [
-                { "Length": 1 },
-                { "Length": 1 },
-                { "Length": 1 },
-                { "Length": 1 }
-              ],
-              "Columns": [
-                //{
-                //  "Length": 300,
-                //  "Unit": "Pixel"
-                //},
-                { "Length": 1 },
-                { "Length": 1 },
-                { "Length": 1 },
-                { "Length": 1 },
-                { "Length": 1 }
+              "Orientation": "Horizontal",
+              "Nodes": [
+                {
+                  "Orientation": "Vertical",
+                  "Lenght": {
+                    "Type": "Star",
+                    "Value": 1.5
+                  },
+                  "Nodes": [
+                    {
+                      "Caption": "План контейнерной площадки",
+                      "ViewModelTypeName": "ContainerAreaWidget",
+                      "ViewTypeName": "ContainerAreaWidgetView"
+                    },
+                    {
+                      "Orientation": "Horizontal",
+                      "Nodes": [
+                        {
+                          "Caption": "Проекция стека",
+                          "ViewModelTypeName": "ContainerCellPositionWidget",
+                          "ViewTypeName": "ContainerCellPositionWidgetView"
+                        },
+                        {
+                          "Caption": "Контейнерная площадка",
+                          "ViewModelTypeName": "ContainerStorageManagementViewModel",
+                          "ViewTypeName": "ContainerStorageManagementView"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Orientation": "Vertical",
+                  "Lenght": {
+                    "Value": 0.5
+                  },
+                  "Nodes": [
+                    {
+                      "Caption": "Структура контейнерной площадки",
+                      "ViewModelTypeName": "ContainerAreaTreeWidget",
+                      "ViewTypeName": "ContainerAreaTreeWidgetView"
+                    },
+                    {
+                      "Caption": "Свойства",
+                      "ViewModelTypeName": "ContainerAreaPropertyWidget",
+                      "ViewTypeName": "ContainerAreaPropertyWidgetView"
+                    }
+                  ]
+                }
               ]
-            },
-            "Components": [
-              {
-                "Name": "ContainerStorage",
-                "Caption": "Контейнерная площадка",
-                "ViewModelTypeName": "ContainerStorageManagementViewModel",
-                "ViewTypeName": "ContainerStorageManagementView",
-                "ColumnIndex": 2,
-                "RowIndex": 2,
-                "ColumnSpan": 2,
-                "RowSpan": 2
-              },
-              {
-                "Name": "ContainerCellPositionWidget",
-                "Caption": "Боковой вид стека",
-                "ViewModelTypeName": "ContainerCellPositionWidget",
-                "ViewTypeName": "ContainerCellPositionWidgetView",
-                "ColumnIndex": 0,
-                "RowIndex": 2,
-                "ColumnSpan": 2,
-                "RowSpan": 2
-              },
-              {
-                "Name": "ContainerAreaWidget",
-                "Caption": "План контейнерной площадки",
-                "ViewModelTypeName": "ContainerAreaWidget",
-                "ViewTypeName": "ContainerAreaWidgetView",
-                "ColumnIndex": 0,
-                "RowIndex": 0,
-                "ColumnSpan": 4,
-                "RowSpan": 2
-              },
-              {
-                "Name": "ContainerAreaTreeWidget",
-                "Caption": "Структура контейнерной площадки",
-                "ViewModelTypeName": "ContainerAreaTreeWidget",
-                "ViewTypeName": "ContainerAreaTreeWidgetView",
-                "ColumnIndex": 4,
-                "RowIndex": 0,
-                "RowSpan": 2
-              },
-              {
-                "Name": "ContainerAreaPropertyWidget",
-                "Caption": "Свойства",
-                "ViewModelTypeName": "ContainerAreaPropertyWidget",
-                "ViewTypeName": "ContainerAreaPropertyWidgetView",
-                "ColumnIndex": 4,
-                "RowIndex": 2,
-                "RowSpan": 2
-              }
-            ],
-
-            "Bindings": [
-            ]
+            } 
           }
         },
 
@@ -1745,13 +1725,13 @@
                 "Name": "Expected",
                 "Caption": "В пути",
                 "Order": 1,
-                "Criteria": ""
+                "Criteria": "atv.State.Marker == 'expected_arrival'"
               },
               {
                 "Name": "Arrived",
                 "Caption": "На въезде",
                 "Order": 2,
-                "Criteria": ""
+                "Criteria": "atv.State.Marker == 'arrived'"
               },
               {
                 "Name": "Boarding",
