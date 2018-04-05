@@ -1545,8 +1545,17 @@
                   ]
                 }
               ]
-            } 
+            }
           }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Состояние КП",
+          "StandaloneWindow": false,
+          "SingleInstance": true,
+          "ViewModelTypeName": "ContainerStorageManagementViewModel",
+          "ViewTypeName": "ContainerStorageManagementView"
         },
 
         {
@@ -1638,22 +1647,22 @@
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Command": "OpenView",
-          "Caption": "Установка контейнера на позицию",
+          "Caption": "Перемещение контейнеров",
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
-            "Type": "bbt.asup.DataModel.ContainerPositionSet"
+            "Type": "bbt.asup.DataModel.ContainerInnerMovement"
           }
         },
 
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Command": "OpenView",
-          "Caption": "Перемещение контейнеров",
+          "Caption": "Задание на затаривание контейнеров",
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
-            "Type": "bbt.asup.DataModel.ContainerInnerMovement"
+            "Type": "bbt.asup.DataModel.ContainerLotLoadingTask"
           }
         },
 
@@ -1731,25 +1740,25 @@
                 "Name": "Arrived",
                 "Caption": "На въезде",
                 "Order": 2,
-                "Criteria": "atv.State.Marker == 'arrived'"
+                "Criteria": "atv.State.Marker == 'arrived' || atv.State.Marker == 'awayting_feed_to_loading_unloading_works'"
               },
               {
                 "Name": "Boarding",
                 "Caption": "В обработке",
                 "Order": 3,
-                "Criteria": ""
+                "Criteria": "atv.State.Marker == 'submitted_for_loading_unloading_works'"
               },
               {
                 "Name": "Completed",
                 "Caption": "На выезде",
                 "Order": 4,
-                "Criteria": ""
+                "Criteria": "atv.State.Marker == 'awaiting_departure'"
               },
               {
                 "Name": "Departured",
                 "Caption": "Отправлено",
                 "Order": 5,
-                "Criteria": ""
+                "Criteria": "atv.State.Marker == 'departured'"
               }
             ]
           }
