@@ -1,0 +1,29 @@
+{
+  "DataType": {
+    "TypeName": "Nostrum.Framework.TypedTemplate",
+    "Assembly": "Nostrum.Framework"
+  },
+  "LookupCriteria": "Name == 'Предварительная информация по лотам'",
+  "Item": {
+    "Name": "Предварительная информация по лотам",
+    "TemplateType": "SysID == GetSystemIdByName('Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT')",
+    "TargetObjectTypeName": "bbt.asup.DataModel.ContainerLotProcessingPreliminaryPlan",
+    "CriteriaString": "",
+    "Visible": true,
+    "IsDefaultReport": false,
+    "Description": ""
+  },
+  "Repository": {
+    "System": "GitHub",
+    "URL": "https://github.com/",
+    "Owner": "nostrum-service",
+    "Name": "bulk-terminal",
+    "Path": "template",
+    "FileName": "Предварительная информация по лотам.repx"
+  },
+  "Publisher": {
+    "System": "bbt.asup.Client",
+    "ProductVersion": "0.9.200.0",
+    "UserName": "admin"
+  }
+}
