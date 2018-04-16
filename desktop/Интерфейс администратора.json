@@ -1072,21 +1072,31 @@
 
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
-          "Caption": "Заявка на завоз груза (контейнеры)",
-          "ViewModelTypeName": "BaseCollectionViewModel",
-          "ViewTypeName": "BaseGridView",
-          "ViewSettings": {
-            "Type": "bbt.asup.DataModel.DeliveryCargoContainerApplication"
-          }
-        },
-
-        {
-          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Caption": "Заявка на включение лотов в план",
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
             "Type": "bbt.asup.DataModel.ContainerLotProcessingPlanRequest"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Предварительная информация по лотам",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.ContainerLotProcessingPreliminaryPlan"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Заявка на завоз груза (контейнеры)",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.DeliveryCargoContainerApplication"
           }
         },
 
@@ -1577,6 +1587,17 @@
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
             "Type": "bbt.asup.DataModel.InsertingOfSealsAct"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Списание ЗПУ",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.SealWriteOffAct"
           }
         },
 
