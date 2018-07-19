@@ -1,0 +1,29 @@
+{
+  "DataType": {
+    "TypeName": "Nostrum.Framework.TypedTemplate",
+    "Assembly": "Nostrum.Framework"
+  },
+  "LookupCriteria": "Name == 'Сопроводительная ведомость'",
+  "Item": {
+    "Name": "Сопроводительная ведомость",
+    "TemplateType": "SysID == GetSystemIdByName('Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT')",
+    "TargetObjectTypeName": "bbt.asup.DataModel.ContainerTransportation",
+    "CriteriaString": "",
+    "Visible": true,
+    "IsDefaultReport": false,
+    "Description": "Добавить критерий - только для вывоза"
+  },
+  "Repository": {
+    "System": "GitHub",
+    "URL": "https://github.com/",
+    "Owner": "nostrum-service",
+    "Name": "bulk-terminal",
+    "Path": "template",
+    "FileName": "Сопроводительная ведомость.repx"
+  },
+  "Publisher": {
+    "System": "bbt.asup.Client",
+    "ProductVersion": "0.9.205.0",
+    "UserName": "admin"
+  }
+}
