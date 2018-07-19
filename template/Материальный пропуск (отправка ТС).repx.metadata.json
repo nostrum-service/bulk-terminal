@@ -1,0 +1,29 @@
+{
+  "DataType": {
+    "TypeName": "Nostrum.Framework.TypedTemplate",
+    "Assembly": "Nostrum.Framework"
+  },
+  "LookupCriteria": "Name == 'Материальный пропуск (отправка ТС)'",
+  "Item": {
+    "Name": "Материальный пропуск (отправка ТС)",
+    "TemplateType": "SysID == GetSystemIdByName('Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT')",
+    "TargetObjectTypeName": "bbt.asup.DataModel.AtvDispatch",
+    "CriteriaString": "Permission != null",
+    "Visible": true,
+    "IsDefaultReport": false,
+    "Description": ""
+  },
+  "Repository": {
+    "System": "GitHub",
+    "URL": "https://github.com/",
+    "Owner": "nostrum-service",
+    "Name": "bulk-terminal",
+    "Path": "template",
+    "FileName": "Материальный пропуск (отправка ТС).repx"
+  },
+  "Publisher": {
+    "System": "bbt.asup.Client",
+    "ProductVersion": "0.9.205.0",
+    "UserName": "admin"
+  }
+}
