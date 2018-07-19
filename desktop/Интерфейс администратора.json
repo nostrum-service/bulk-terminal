@@ -993,11 +993,11 @@
 
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
-          "Caption": "Коносамент",
+          "Caption": "Коносамент (погрузка навалом)",
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
-            "Type": "bbt.asup.DataModel.BillOfLading"
+            "Type": "bbt.asup.DataModel.BillOfLadingInBulk"
           }
         },
 
@@ -1487,6 +1487,155 @@
     },
 
     {
+      "Id": "{DF58C178-F659-44BA-A7A9-5418F2C9DF39}",
+      "Name": "ModuleRwcProcessing",
+      "Caption": "Обработка вагонов",
+      "Commands": [
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Перемещение",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.RailwayCarInnerMovement"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Подача на разгрузку",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.RailwayCarFeedToUnloading"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Разгрузка",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.RailwayCarUnloadingStatement"
+          }
+        }
+      ]
+
+    },
+
+    {
+      "Id": "{06E12E3E-D2CE-4D6A-BE87-2AC9550B399D}",
+      "Name": "ModuleAtvProcessing",
+      "Caption": "Обработка автотранспорта",
+      "Commands": [
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Рейсы автотранспорта",
+          "StandaloneWindow": false,
+          "SingleInstance": true,
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.AutoTransportVoyage"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Прием Т/С",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.AtvAcceptance"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Подача Т/С на ПРР",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.Process.AutoTransportFeedEvent"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Отправка Т/С",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.AtvDispatch"
+          }
+        }
+      ]
+
+    },
+
+    {
+      "Id": "{2A575B47-BFE5-4831-BDA0-806385B529F1}",
+      "Name": "ModuleContainerProcessing",
+      "Caption": "Обработка контейнеров",
+      "Commands": [
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Смена лота",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.ContainerBelongingToLotChange"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Перемещение",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.ContainerInnerMovement"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Фасовка груза",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.CargoPackingStatement"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Затаривание",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.ContainerLoadingStatement"
+          }
+        }
+      ]
+
+    },
+
+    {
       "Id": "{3750B5A4-626A-45AE-82B3-22E14C6333DC}",
       "Name": "ModuleCTM",
       "Caption": "Управление КП",
@@ -1561,11 +1710,110 @@
 
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Id": "{3D758F9F-6223-4A62-A7D1-CB5F27170CC0}",
+          "Command": "OpenView",
+          "Caption": "Панель управления",
+          "SingleInstance": true,
+          "ViewModelTypeName": "DashboardViewModel",
+          "ViewTypeName": "DashboardView",
+          "ViewSettings": {
+            "Title": "Панель управления",
+            "ControllerTypeName": "",
+            "LayoutMode": "FreeLayout",
+            "Layout": {
+              "Orientation": "Horizontal",
+              "Nodes": [
+                {
+                  "Orientation": "Vertical",
+                  "Lenght": {
+                    "Type": "Star",
+                    "Value": 1.5
+                  },
+                  "Nodes": [
+                    {
+                      "Caption": "Состояние КП",
+                      "ViewModelTypeName": "bbt.plugin.ctm.ViewModels.ContainerStorageManagementViewModel",
+                      "ViewTypeName": "bbt.plugin.ctm.Views.ContainerStorageManagementView"
+                    },
+                    {
+                      "Orientation": "Horizontal",
+                      "Nodes": [
+                        {
+                          "Caption": "Автотранспорт",
+                          "ViewModelTypeName": "bbt.asup.ui.ViewModels.AtvHandlingWidgetViewModel",
+                          "ViewTypeName": "bbt.asup.ui.Views.AtvHandlingWidgetView"
+                        },
+                        {
+                          "Caption": "Движение контейнеров",
+                          "ViewModelTypeName": "bbt.plugin.ctm.ViewModels.ContainerMovementWidgetViewModel",
+                          "ViewTypeName": "bbt.plugin.ctm.Views.ContainerMovementWidgetView"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Orientation": "Vertical",
+                  "Lenght": {
+                    "Value": 0.5
+                  },
+                  "Nodes": [
+                    {
+                      "Caption": "Разгрузка вагонов",
+                      "ViewModelTypeName": "bbt.asup.ui.ViewModels.RwcUnloadingWidgetViewModel",
+                      "ViewTypeName": "bbt.asup.ui.Views.RwcUnloadingWidgetView"
+                    },
+                    {
+                      "Caption": "ПРВ",
+                      "ViewModelTypeName": "bbt.asup.ui.ViewModels.UnloadingStationStatusWidgetViewModel",
+                      "ViewTypeName": "bbt.asup.ui.Views.UnloadingStationStatusWidgetView"
+                    },
+                    {
+                      "Caption": "Затарка контейнеров",
+                      "ViewModelTypeName": "bbt.asup.ui.ViewModels.ContainerLoadingWidgetViewModel",
+                      "ViewTypeName": "bbt.asup.ui.Views.ContainerLoadingWidgetView"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Caption": "Состояние КП",
           "StandaloneWindow": false,
           "SingleInstance": true,
           "ViewModelTypeName": "ContainerStorageManagementViewModel",
           "ViewTypeName": "ContainerStorageManagementView"
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Статистика по лотам",
+          "StandaloneWindow": false,
+          "SingleInstance": true,
+          "ViewModelTypeName": "ContainerLotStatisticsWidgetViewModel",
+          "ViewTypeName": "ContainerLotStatisticsWidgetView"
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Автотранспорт на терминале",
+          "StandaloneWindow": false,
+          "SingleInstance": true,
+          "ViewModelTypeName": "AtvStatusWidgetViewModel",
+          "ViewTypeName": "AtvStatusWidgetView"
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Наличие ЗПУ",
+          "StandaloneWindow": false,
+          "SingleInstance": true,
+          "ViewModelTypeName": "SealAvailableWidgetViewModel",
+          "ViewTypeName": "SealAvailableWidgetView"
         },
 
         {
@@ -1690,6 +1938,28 @@
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Command": "OpenView",
+          "Caption": "Взвешивание контейнеров",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.ContainerWeighting"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Фасовка груза",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.CargoPackingStatement"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
           "Caption": "Затаривание контейнеров",
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
@@ -1712,11 +1982,22 @@
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Command": "OpenView",
-          "Caption": "Выдача контейнеров",
+          "Caption": "Отправка контейнеров на терминал",
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
-            "Type": "bbt.asup.DataModel.ContainerDeparture"
+            "Type": "bbt.asup.DataModel.ContainerDispatchingToTerminal"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Переадресация контейнеров",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.ContainerForwarding"
           }
         },
 
@@ -1739,6 +2020,28 @@
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
             "Type": "bbt.asup.DataModel.ContainerTransferStatement"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Погрузочное поручение (контейнеры)",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.BoardingAssignmentInContainer"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Коносамент (контейнеры)",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.BillOfLadingInContainer"
           }
         },
 
@@ -1840,6 +2143,14 @@
       "Commands": [
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Редактирование разметки КП",
+          "ViewModelTypeName": "ContainerAreaEditWidget",
+          "ViewTypeName": "ContainerAreaEditWidgetView",
+          "SingleInstance": true
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Caption": "Удаление данных",
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
@@ -1905,7 +2216,7 @@
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
-            "Type": "bbt.asup.DataModel.FacilityTopology",
+            "Type": "bbt.asup.DataModel.FacilityTopology"
           }
         },
 
