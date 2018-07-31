@@ -1564,7 +1564,7 @@
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
-            "Type": "bbt.asup.DataModel.Process.AutoTransportFeedEvent"
+            "Type": "bbt.asup.DataModel.AtvFeedToHandling"
           }
         },
 
