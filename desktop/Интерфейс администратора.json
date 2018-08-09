@@ -1571,6 +1571,28 @@
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Command": "OpenView",
+          "Caption": "Начало ПРР т/с",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.AtvAcceptanceForHandling"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Завершение ПРР т/с",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.AtvCompletionOfHandling"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
           "Caption": "Отправка Т/С",
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
@@ -1805,6 +1827,15 @@
           "SingleInstance": true,
           "ViewModelTypeName": "AtvStatusWidgetViewModel",
           "ViewTypeName": "AtvStatusWidgetView"
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Автотранспорт на КП",
+          "StandaloneWindow": false,
+          "SingleInstance": true,
+          "ViewModelTypeName": "AtvHandlingWidgetViewModel",
+          "ViewTypeName": "AtvHandlingWidgetView"
         },
 
         {
@@ -2310,79 +2341,88 @@
 
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
-          "Caption": "Генераторы отчетов",
-          "ViewModelTypeName": "BaseCollectionViewModel",
-          "ViewTypeName": "BaseGridView",
-          "ViewSettings": {
-            "Type": "Nostrum.Framework.ReportGeneratorScript"
-          }
-        },
-
-        {
-          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
-          "Caption": "Шаблоны отчетов",
-          "ViewModelTypeName": "BaseCollectionViewModel",
-          "ViewTypeName": "BaseGridView",
-          "ViewSettings": {
-            "Type": "Nostrum.Framework.StandaloneTemplate"
-          }
-        },
-
-        {
-          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
-          "Caption": "Шаблоны документов",
-          "ViewModelTypeName": "BaseCollectionViewModel",
-          "ViewTypeName": "BaseGridView",
-          "ViewSettings": {
-            "Type": "Nostrum.Framework.TypedTemplate"
-          }
-        },
-
-        {
-          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
-          "Caption": "Внешние связи",
-          "ViewModelTypeName": "DataExchangeSystemMapViewModel",
-          "ViewTypeName": "DataExchangeSystemMapView"
-        },
-
-        {
-          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
-          "Caption": "Схемы процессов",
-          "ViewModelTypeName": "BaseCollectionViewModel",
-          "ViewTypeName": "BaseGridView",
-          "ViewSettings": {
-            "Type": "Nostrum.Framework.WorkflowDefinition"
-          },
-          "Images": [
-            {
-              "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
-              "Id": "Scripts",
-              "Size": "Size16x16",
-              "Type": "Office2013"
-            }
-          ]
-        },
-
-        {
-          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
-          "Caption": "Регламентные задания",
+          "Caption": "Реестр показателей",
           "StandaloneWindow": false,
           "SingleInstance": true,
-          "ViewModelTypeName": "ScheduledTaskManagerViewModel",
-          "ViewTypeName": "ScheduledTaskManagerView",
-          "Images": [
-            {
-              "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
-              "Id": "Calendar",
-              "Size": "Size16x16",
-              "Type": "Office2013"
+          "ViewModelTypeName": "RegistryWidgetViewModel",
+          "ViewTypeName": "RegistryWidgetView"
+        },
+
+          {
+            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+            "Caption": "Генераторы отчетов",
+            "ViewModelTypeName": "BaseCollectionViewModel",
+            "ViewTypeName": "BaseGridView",
+            "ViewSettings": {
+              "Type": "Nostrum.Framework.ReportGeneratorScript"
             }
+          },
+
+          {
+            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+            "Caption": "Шаблоны отчетов",
+            "ViewModelTypeName": "BaseCollectionViewModel",
+            "ViewTypeName": "BaseGridView",
+            "ViewSettings": {
+              "Type": "Nostrum.Framework.StandaloneTemplate"
+            }
+          },
+
+          {
+            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+            "Caption": "Шаблоны документов",
+            "ViewModelTypeName": "BaseCollectionViewModel",
+            "ViewTypeName": "BaseGridView",
+            "ViewSettings": {
+              "Type": "Nostrum.Framework.TypedTemplate"
+            }
+          },
+
+          {
+            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+            "Caption": "Внешние связи",
+            "ViewModelTypeName": "DataExchangeSystemMapViewModel",
+            "ViewTypeName": "DataExchangeSystemMapView"
+          },
+
+          {
+            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+            "Caption": "Схемы процессов",
+            "ViewModelTypeName": "BaseCollectionViewModel",
+            "ViewTypeName": "BaseGridView",
+            "ViewSettings": {
+              "Type": "Nostrum.Framework.WorkflowDefinition"
+            },
+            "Images": [
+              {
+                "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                "Id": "Scripts",
+                "Size": "Size16x16",
+                "Type": "Office2013"
+              }
+            ]
+          },
+
+          {
+            "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+            "Caption": "Регламентные задания",
+            "StandaloneWindow": false,
+            "SingleInstance": true,
+            "ViewModelTypeName": "ScheduledTaskManagerViewModel",
+            "ViewTypeName": "ScheduledTaskManagerView",
+            "Images": [
+              {
+                "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+                "Id": "Calendar",
+                "Size": "Size16x16",
+                "Type": "Office2013"
+              }
+            ]
+          }
+
+
           ]
         }
 
-
       ]
-    }
-
-  ]
 }
