@@ -1,0 +1,27 @@
+{
+  "DataType": {
+    "TypeName": "Nostrum.Framework.StandaloneTemplate",
+    "Assembly": "Nostrum.Framework"
+  },
+  "LookupCriteria": "Name == 'Реестр актов затарки контейнеров'",
+  "Item": {
+    "Name": "Реестр актов затарки контейнеров",
+    "TemplateType": "SysID == GetSystemIdByName('Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT')",
+    "Provider": "Name == 'Реестр актов затарки контейнеров'",
+    "Visible": true,
+    "Description": ""
+  },
+  "Repository": {
+    "System": "GitHub",
+    "URL": "https://github.com/",
+    "Owner": "nostrum-service",
+    "Name": "bulk-terminal",
+    "Path": "template",
+    "FileName": "Реестр актов затарки контейнеров.repx"
+  },
+  "Publisher": {
+    "System": "bbt.asup.Client",
+    "ProductVersion": "0.9.500.0",
+    "UserName": "admin"
+  }
+}
