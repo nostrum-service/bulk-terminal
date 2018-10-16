@@ -1,0 +1,27 @@
+{
+  "DataType": {
+    "TypeName": "Nostrum.Framework.StandaloneTemplate",
+    "Assembly": "Nostrum.Framework"
+  },
+  "LookupCriteria": "Name == 'Состояние КП'",
+  "Item": {
+    "Name": "Состояние КП",
+    "TemplateType": "SysID == GetSystemIdByName('Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT')",
+    "Provider": "Name == 'Состояние контейнерной площадки'",
+    "Visible": true,
+    "Description": ""
+  },
+  "Repository": {
+    "System": "GitHub",
+    "URL": "https://github.com/",
+    "Owner": "nostrum-service",
+    "Name": "bulk-terminal",
+    "Path": "template",
+    "FileName": "Состояние КП.repx"
+  },
+  "Publisher": {
+    "System": "bbt.asup.Client",
+    "ProductVersion": "0.9.500.0",
+    "UserName": "admin"
+  }
+}
