@@ -1661,22 +1661,22 @@
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Command": "OpenView",
-          "Caption": "Перемещение",
+          "Caption": "Прием контейнеров",
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
-            "Type": "bbt.asup.DataModel.ContainerInnerMovement"
+            "Type": "bbt.asup.DataModel.ContainerAcceptance"
           }
         },
 
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Command": "OpenView",
-          "Caption": "Фасовка груза",
+          "Caption": "Перемещение контейнеров",
           "ViewModelTypeName": "BaseCollectionViewModel",
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
-            "Type": "bbt.asup.DataModel.CargoPackingStatement"
+            "Type": "bbt.asup.DataModel.ContainerInnerMovement"
           }
         },
 
@@ -1689,7 +1689,41 @@
           "ViewSettings": {
             "Type": "bbt.asup.DataModel.ContainerLoadingStatement"
           }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Переадресация",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.ContainerForwarding"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Отправка на КТ",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.ContainerDispatchingToTerminal"
+          }
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Command": "OpenView",
+          "Caption": "Фасовка груза",
+          "ViewModelTypeName": "BaseCollectionViewModel",
+          "ViewTypeName": "BaseGridView",
+          "ViewSettings": {
+            "Type": "bbt.asup.DataModel.CargoPackingStatement"
+          }
         }
+
       ]
 
     },
@@ -1967,28 +2001,6 @@
           "ViewTypeName": "BaseGridView",
           "ViewSettings": {
             "Type": "bbt.asup.DataModel.AutoTransportVoyage"
-          }
-        },
-
-        {
-          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
-          "Command": "OpenView",
-          "Caption": "Прием контейнеров",
-          "ViewModelTypeName": "BaseCollectionViewModel",
-          "ViewTypeName": "BaseGridView",
-          "ViewSettings": {
-            "Type": "bbt.asup.DataModel.ContainerAcceptance"
-          }
-        },
-
-        {
-          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
-          "Command": "OpenView",
-          "Caption": "Перемещение контейнеров",
-          "ViewModelTypeName": "BaseCollectionViewModel",
-          "ViewTypeName": "BaseGridView",
-          "ViewSettings": {
-            "Type": "bbt.asup.DataModel.ContainerInnerMovement"
           }
         },
 
