@@ -518,6 +518,14 @@
 
         {
           "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Груз на КП",
+          "SingleInstance": true,
+          "ViewModelTypeName": "ContainerStorageBalanceViewModel",
+          "ViewTypeName": "ContainerStorageBalanceView"
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
           "Caption": "Обработка лотов",
           "StandaloneWindow": false,
           "SingleInstance": true,
@@ -527,6 +535,23 @@
             {
               "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
               "Id": "SalesAnalysis",
+              "Size": "Size16x16",
+              "Type": "DevAV"
+            }
+          ]
+        },
+
+        {
+          "$type": "nostrum.mvvm.OpenViewCommand, nostrum.mvvm",
+          "Caption": "Обработка автотранспорта",
+          "StandaloneWindow": false,
+          "SingleInstance": true,
+          "ViewModelTypeName": "AtvStatusWidgetViewModel",
+          "ViewTypeName": "AtvStatusWidgetView",
+          "Images": [
+            {
+              "$type": "nostrum.mvvm.DxImageInfo, nostrum.mvvm",
+              "Id": "Driving",
               "Size": "Size16x16",
               "Type": "DevAV"
             }
