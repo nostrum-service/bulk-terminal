@@ -3,13 +3,33 @@
     "TypeName": "Nostrum.Framework.StandaloneTemplate",
     "Assembly": "Nostrum.Framework"
   },
-  "LookupCriteria": "Name == 'Состояние КП'",
+  "LookupCriteria": "Name == 'Состояние контейнерной площадки'",
   "Item": {
-    "Name": "Состояние КП",
-    "TemplateType": "SysID == GetSystemIdByName('Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT')",
-    "Provider": "Name == 'Состояние контейнерной площадки'",
-    "Visible": true,
-    "Description": ""
+    "DataType": {
+      "TypeName": "Nostrum.Framework.StandaloneTemplate",
+      "Assembly": "Nostrum.Framework"
+    },
+    "LookupCriteria": "Name == 'Состояние КП'",
+    "Item": {
+      "Name": "Состояние КП",
+      "TemplateType": "SysID == GetSystemIdByName('Nostrum.Framework.DBO_SYS_ENUM.SX_TEMPLATE_TYPE_REPORT')",
+      "Provider": "Name == 'Состояние контейнерной площадки'",
+      "Visible": true,
+      "Description": ""
+    },
+    "Repository": {
+      "System": "GitHub",
+      "URL": "https://github.com/",
+      "Owner": "nostrum-service",
+      "Name": "bulk-terminal",
+      "Path": "template",
+      "FileName": "Состояние КП.repx"
+    },
+    "Publisher": {
+      "System": "bbt.asup.Client",
+      "ProductVersion": "0.9.500.0",
+      "UserName": "admin"
+    }
   },
   "Repository": {
     "System": "GitHub",
@@ -21,7 +41,7 @@
   },
   "Publisher": {
     "System": "bbt.asup.Client",
-    "ProductVersion": "0.9.500.0",
+    "ProductVersion": "0.9.601.0",
     "UserName": "admin"
   }
 }
